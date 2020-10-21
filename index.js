@@ -96,9 +96,18 @@ function removeLinks() {
 
 function TrimChar(){
 
-    const paragraph = document.querySelectorAll('div.blog-post > p')[0]
+    const div = document.querySelectorAll('.blog-post >p')
+    for(i = 0; i < div.length; i++){
 
-    paragraph.innerHTML.substring(50)
+        if((div[i].innerText).length>=50){
+
+            div[i].innerText.substring(50)
+        }
+
+
+    }
+
+
 
 
 }
